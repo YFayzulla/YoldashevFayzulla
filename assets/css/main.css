@@ -686,15 +686,18 @@ section,
 }
 
 .skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .skills .progress-bar {
   width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+  height: 8px;
+  transition: 0.9s ease-in-out;
+  background: linear-gradient(90deg, var(--accent-color) 0%, #1e88e5 100%);
+  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -702,7 +705,7 @@ section,
 --------------------------------------------------------------*/
 .resume .resume-title {
   color: var(--heading-color);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -725,11 +728,14 @@ section,
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
-  padding: 5px 15px;
+  font-size: 14px;
+  padding: 4px 12px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  color: var(--accent-color);
+  border-radius: 4px;
 }
 
 .resume .resume-item ul {
@@ -754,6 +760,46 @@ section,
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+
+.resume .btn-download-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 18px;
+  background: var(--accent-color);
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-top: 8px;
+  box-shadow: 0 4px 15px rgba(5, 99, 187, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resume .btn-download-resume:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 99, 187, 0.3);
+}
+
+.resume .btn-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  color: var(--accent-color) !important;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+.resume .btn-cert-badge:hover {
+  background: var(--accent-color);
+  color: #ffffff !important;
 }
 
 /*--------------------------------------------------------------
